@@ -7,12 +7,19 @@
     <link rel="stylesheet" type="text/css" href="makanan1.css">
 </head>
 <body>
+<?php
+   session_start();
+   if(isset($_SESSION['Username'])) {
+   header('location:index.php'); }
+   require_once("Untitled-1.php");
+?>
+
     <h1 align ="center">Selamat Datang</h1>
     
     <div class="kotak_masuk">
 		<p class="masuk">SILAHKAN MASUK</p>  
     
-        <form action="" method="post">
+        <form action="proseslogin.php" method="post">
             <label>Username   : </label>
             <input type="text" name="Username" class="masuk" placeholder ="Username"> <br>
             <label>Password   : </label>
